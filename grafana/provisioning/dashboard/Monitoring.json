@@ -23,7 +23,7 @@
   "liveNow": false,
   "panels": [
     {
-      "collapsed": true,
+      "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -31,48 +31,47 @@
         "y": 0
       },
       "id": 11,
-      "panels": [
+      "panels": [],
+      "title": "Tunnel Logs",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "P8E80F9AEF21F6940"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 2,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": false,
+        "sortOrder": "Ascending",
+        "wrapLogMessage": false
+      },
+      "targets": [
         {
           "datasource": {
             "type": "loki",
             "uid": "P8E80F9AEF21F6940"
           },
-          "gridPos": {
-            "h": 8,
-            "w": 12,
-            "x": 0,
-            "y": 1
-          },
-          "id": 2,
-          "options": {
-            "dedupStrategy": "none",
-            "enableLogDetails": true,
-            "prettifyLogMessage": false,
-            "showCommonLabels": false,
-            "showLabels": false,
-            "showTime": false,
-            "sortOrder": "Descending",
-            "wrapLogMessage": false
-          },
-          "targets": [
-            {
-              "datasource": {
-                "type": "loki",
-                "uid": "P8E80F9AEF21F6940"
-              },
-              "editorMode": "builder",
-              "expr": "{job=\"syslog\"} | level = `$TunnelLogLevel`",
-              "hide": false,
-              "queryType": "range",
-              "refId": "A"
-            }
-          ],
-          "title": "Tunnel Logs",
-          "type": "logs"
+          "editorMode": "builder",
+          "expr": "{job=\"syslog\"} | level = `$TunnelLogLevel`",
+          "hide": false,
+          "queryType": "range",
+          "refId": "A"
         }
       ],
       "title": "Tunnel Logs",
-      "type": "row"
+      "type": "logs"
     },
     {
       "collapsed": false,
@@ -80,7 +79,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 1
+        "y": 9
       },
       "id": 7,
       "panels": [],
@@ -150,7 +149,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 2
+        "y": 10
       },
       "id": 9,
       "options": {
@@ -242,7 +241,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 2
+        "y": 10
       },
       "id": 8,
       "options": {
@@ -333,7 +332,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 10
+        "y": 18
       },
       "id": 5,
       "options": {
@@ -424,7 +423,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 10
+        "y": 18
       },
       "id": 10,
       "options": {
@@ -515,7 +514,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 18
+        "y": 26
       },
       "id": 12,
       "options": {
@@ -607,7 +606,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 18
+        "y": 26
       },
       "id": 13,
       "options": {
@@ -641,7 +640,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 34
       },
       "id": 6,
       "panels": [],
@@ -695,8 +694,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -711,7 +709,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 27
+        "y": 35
       },
       "id": 4,
       "options": {
@@ -786,8 +784,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -802,7 +799,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 27
+        "y": 35
       },
       "id": 3,
       "options": {
@@ -837,7 +834,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 35
+        "y": 43
       },
       "id": 14,
       "panels": [],
@@ -891,8 +888,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -908,7 +904,7 @@
         "h": 7,
         "w": 8,
         "x": 0,
-        "y": 36
+        "y": 44
       },
       "id": 17,
       "options": {
@@ -983,8 +979,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1000,7 +995,7 @@
         "h": 7,
         "w": 8,
         "x": 8,
-        "y": 36
+        "y": 44
       },
       "id": 18,
       "options": {
@@ -1075,8 +1070,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1092,7 +1086,7 @@
         "h": 7,
         "w": 8,
         "x": 16,
-        "y": 36
+        "y": 44
       },
       "id": 16,
       "options": {
@@ -1161,7 +1155,7 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
