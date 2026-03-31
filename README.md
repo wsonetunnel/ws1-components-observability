@@ -88,7 +88,7 @@ log {
 #### Configuration (for Telemetry)
 
 * Tunnel Server container already exposes port 161 for snmp stats.
-* In UAG, enable snmp following guide [here](https://docs.vmware.com/en/Unified-Access-Gateway/2303/uag-deploy-config/GUID-F71E6283-E24B-49F5-8AC6-D28915CD41AD.html).
+* In UAG, enable snmp following guide [here](https://docs.omnissa.com/bundle/UnifiedAccessGatewayDeployandConfigureV2506/page/Systemconfiguration.html).
 * Only snmp v2 is supported.
 * Update `SNMP_SERVERS` section in [.env](./.env) to supply Tunnel Server IPs in the format `udp://<hostname_or_ip1>:161` for Observability stack to pull the snmp stats.
 
@@ -138,6 +138,6 @@ log {
 
 ## Reference documents
 
-* [Syslog Configuration](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/VMware_Tunnel/GUID-471260BA-4DDC-4BFE-B8C3-FA2DDC2116A1.html)
-* [SNMP Configuration in UAG](https://docs.vmware.com/en/Unified-Access-Gateway/2303/uag-deploy-config/GUID-F71E6283-E24B-49F5-8AC6-D28915CD41AD.html)
+* [Syslog Configuration](https://docs.omnissa.com/bundle/SystemSettingsV2310/page/TunnelConfigurationSettings.html)
+* [SNMP Configuration in UAG](https://docs.omnissa.com/bundle/UnifiedAccessGatewayDeployandConfigureV2506/page/Systemconfiguration.html)
 * [Syslog AIO](https://github.com/lux4rd0/grafana-loki-syslog-aio)
